@@ -1,0 +1,68 @@
+<!DOCYTPE html>
+<html lang="en">
+<head>
+  <title>Binary</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel='stylesheet' href='main.css'>
+</head>
+
+<body>
+<div class="container">
+
+<div class="row">
+	<div class="col-sm-12 school-options-dropdown text-center">
+		<div class="dropdown btn-group">
+		  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Conversions & Operations
+		  <span class="caret"></span></button>
+		  <ul class="dropdown-menu">
+			<li><a href="convertToBinary.html">Convert To Binary</a></li>
+			<li><a href="convertFromBinary.html">Convert From Binary</a></li>
+			<li><a href="addBinary.html">Add Binary</a></li>
+			<li><a href="subtractBinary.html">Subtract Binary</a></li>
+		  </ul>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12 text-center">
+	<h3>Subtract Binary</h3>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-sm-12 text-center">
+	<input type="text" id="binary1">
+	<h4>-</h4>
+	<input type="text" id="binary2">
+  </div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12 text-center">
+		<button onclick="Calculate()">Calculate</button>
+	</div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12 text-center">
+		<h1 id="ans"><h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12 text-center">
+		<h1 id="ans2"><h1>
+  </div>
+</div>
+
+<div/>
+</body>
+
+<script src="subtractBinary.js"></script>
+</html>
