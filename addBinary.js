@@ -60,12 +60,22 @@ function ConvertToInt(binary){
 }
 
 function CheckInput(binary1, binary2){
+	var goodInput = true;
 	if (isNaN(binary1) || binary1 == "" || isNaN(binary2) || binary2 == ""){
-		document.getElementById("ans").innerHTML = "Bad input, input must be in binary<br>with no spaces";
-		document.getElementById("ans2").innerHTML = "";
-		return;
+		goodInput = false;
 	}
-	else {
+	for (i = 0; i <= binary1.length - 1; i++){
+		if ((binary1[i] != '0') && (binary1[i] != '1')){
+			goodInput = false;
+		}
+	}
+	for (i = 0; i <= binary2.length - 1; i++){
+		if ((binary2[i] != '0') && (binary2[i] != '1')){
+			goodInput = false;
+		}
+	}
+	
+	if (goodInput == true) {
 		var num1 = ConvertToInt(binary1);
 		var num2 = ConvertToInt(binary2);
 		var total = num1 + num2;
@@ -76,6 +86,12 @@ function CheckInput(binary1, binary2){
 		var s = binary1 + " + " + binary2 + " = " + bTotal;
 		document.getElementById("ans2").innerHTML = s;
 	}
+	else {
+		document.getElementById("ans").innerHTML = "Bad input, input must be in binary<br>with no spaces";
+		document.getElementById("ans2").innerHTML = "";
+	}
+	
+
 
 }
 
